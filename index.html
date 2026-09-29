@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Banking Login - Training Simulation</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f2f4f7;margin:0;min-height:100vh;display:flex;justify-content:center;align-items:center}
+.login-box{background:#fff;width:360px;padding:30px;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,.15)}
+h1{text-align:center;margin-bottom:20px}
+.notice{background:#fff3cd;padding:12px;margin-bottom:20px;text-align:center;font-size:14px}
+label{display:block;margin-top:15px;margin-bottom:5px}
+input{width:100%;padding:11px;box-sizing:border-box;border:1px solid #aaa;border-radius:5px}
+button{width:100%;padding:12px;margin-top:20px;border:none;border-radius:5px;cursor:pointer;font-size:16px}
+.login-button{background:#2463b5;color:#fff}.continue-button{background:#333;color:#fff}
+#warning{display:none;margin-top:20px;padding:15px;background:#f8d7da;border:1px solid #f5c2c7}
+</style>
+</head>
+<body>
+<div class="login-box">
+<h1>Online Banking Login</h1>
+<div class="notice">Cybersecurity Training Simulation – Do not enter real credentials.</div>
+<form id="loginForm" autocomplete="off">
+<label for="username">Username</label>
+<input id="username" type="text" autocomplete="off" required>
+<label for="password">Password</label>
+<input id="password" type="password" autocomplete="off" required>
+<button type="submit" class="login-button">Login</button>
+</form>
+<div id="warning">
+<strong>PHISHING SIMULATION</strong>
+<p>The information you entered could have been captured and sent to an attacker if this were a real phishing website.</p>
+<p>Always check the website address before entering your username or password.</p>
+<button type="button" class="continue-button" onclick="continueToOfficialWebsite()">Continue to Official Website</button>
+</div>
+</div>
+<script>
+document.getElementById("loginForm").addEventListener("submit",function(event){event.preventDefault();document.getElementById("warning").style.display="block";});
+function continueToOfficialWebsite(){window.location.href="https://www.example.com/";}
+</script>
+</body>
+</html>
